@@ -2,6 +2,8 @@
 
 #include <vcl.h>
 #pragma hdrstop
+#include "mmsystem.h"
+
 
 #include "Unit1.h"
 //---------------------------------------------------------------------------
@@ -12,6 +14,7 @@ TForm1 *Form1;
 int liczby[1000];
 bool gra_rozpoczeta = false;
 int ile=0;
+int licznik=0;
 
 void sekwencja()
 {
@@ -97,8 +100,26 @@ void __fastcall TForm1::Label1Click(TObject *Sender)
         if(gra_rozpoczeta == false)
         {
         gra_rozpoczeta = true;
-        sndPlaySound("snd/start.wav', SND_ASYNC);
+        sndPlaySound("snd/start.wav", SND_ASYNC);
         sekwencja();
         }
 }
+//-------------------------------------------------------------------------- -
+
+void __fastcall TForm1::z1Click(TObject *Sender)
+{
+        if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[i-1]!=1)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+        }
+}
 //---------------------------------------------------------------------------
+

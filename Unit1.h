@@ -25,9 +25,9 @@ __published:	// IDE-managed Components
         TImage *z3a;
         TImage *z4a;
         TImage *z5a;
-        void __fastcall z1aClick(TObject *Sender);
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall Label1Click(TObject *Sender);
+        void __fastcall z1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
