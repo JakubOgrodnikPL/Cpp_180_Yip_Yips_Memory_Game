@@ -106,3 +106,20 @@ void __fastcall TForm1::Label1Click(TObject *Sender)
 }
 //-------------------------------------------------------------------------- -
 
+void __fastcall TForm1::z1Click(TObject *Sender)
+{
+        if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[i-1]!=1)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+        }
+}
+//---------------------------------------------------------------------------
+
