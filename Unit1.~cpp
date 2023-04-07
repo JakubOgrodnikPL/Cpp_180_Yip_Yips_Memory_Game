@@ -18,6 +18,7 @@ int licznik=0;
 
 void sekwencja()
 {
+        Application->ProcessMessages(); Sleep(1000);
         Form1->z1->Enabled = false;
         Form1->z2->Enabled = false;
         Form1->z3->Enabled = false;
@@ -77,6 +78,7 @@ void sekwencja()
         Form1->z4->Enabled = true;
         Form1->z5->Enabled = true;
         Form1->Label1->Caption = "Powtorz sekwencje";
+        licznik=0;
 
 }
 
@@ -112,12 +114,110 @@ void __fastcall TForm1::z1Click(TObject *Sender)
         {
         licznik++;
 
-        if(liczby[i-1]!=1)
+        if(liczby[licznik-1]!=1)
                 {
                         ile--;
                         Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
                         sndPlaySound("snd/koniec.wav", SND_ASYNC);
                         gra_rozpoczeta = false;
+                }
+
+                if(licznik == ile)
+                {
+                        Label1->Caption = "Doskonale!";
+                        sekwencja();
+                }
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z2Click(TObject *Sender)
+{
+if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[licznik-1]!=2)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+
+                if(licznik == ile)
+                {
+                        Label1->Caption = "Doskonale!";
+                        sekwencja();
+                }
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z3Click(TObject *Sender)
+{
+if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[licznik-1]!=3)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+
+                if(licznik == ile)
+                {
+                        Label1->Caption = "Doskonale!";
+                        sekwencja();
+                }
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z4Click(TObject *Sender)
+{
+if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[licznik-1]!=4)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+
+                if(licznik == ile)
+                {
+                        Label1->Caption = "Doskonale!";
+                        sekwencja();
+                }
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z5Click(TObject *Sender)
+{
+if (gra_rozpoczeta == true)
+        {
+        licznik++;
+
+        if(liczby[licznik-1]!=5)
+                {
+                        ile--;
+                        Label1->Caption = "Skucha! twój wynik: "+IntToStr(ile);
+                        sndPlaySound("snd/koniec.wav", SND_ASYNC);
+                        gra_rozpoczeta = false;
+                }
+
+                if(licznik == ile)
+                {
+                        Label1->Caption = "Doskonale!";
+                        sekwencja();
                 }
         }
 }

@@ -32,6 +32,34 @@ __published:	// IDE-managed Components
         void __fastcall z3Click(TObject *Sender);
         void __fastcall z4Click(TObject *Sender);
         void __fastcall z5Click(TObject *Sender);
+        
+        void __fastcall z1MouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+        void __fastcall z1MouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+
+        void __fastcall z2MouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+        void __fastcall z2MouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+
+          void __fastcall z3MouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+        void __fastcall z3MouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+
+          void __fastcall z4MouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+        void __fastcall z4MouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+
+          void __fastcall z5MouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+        void __fastcall z5MouseUp(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y);
+
+
+
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

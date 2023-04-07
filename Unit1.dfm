@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 230
-  Top = 163
+  Left = 179
+  Top = 123
   Width = 818
   Height = 575
   Caption = 'Yip Yips Memory Game'
@@ -41045,6 +41045,8 @@ object Form1: TForm1
       FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF0000FF0000}
     Transparent = True
     OnClick = z1Click
+    OnMouseDown = z1MouseDown
+    OnMouseUp = z1MouseUp
   end
   object z2: TImage
     Left = 232

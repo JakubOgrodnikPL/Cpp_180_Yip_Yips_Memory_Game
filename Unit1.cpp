@@ -19,6 +19,13 @@ int licznik=0;
 void sekwencja()
 {
         Application->ProcessMessages(); Sleep(1000);
+
+        Form1->z1->Picture->LoadFromFile("img/p1.bmp");
+        Form1->z2->Picture->LoadFromFile("img/p2.bmp");
+        Form1->z3->Picture->LoadFromFile("img/p3.bmp");
+        Form1->z4->Picture->LoadFromFile("img/p4.bmp");
+        Form1->z5->Picture->LoadFromFile("img/p5.bmp");
+
         Form1->z1->Enabled = false;
         Form1->z2->Enabled = false;
         Form1->z3->Enabled = false;
@@ -220,6 +227,81 @@ if (gra_rozpoczeta == true)
                         sekwencja();
                 }
         }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z1MouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z1->Picture->LoadFromFile("img/p1a.bmp");
+        sndPlaySound("snd/d1.wav", SND_ASYNC);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z1MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z1->Picture->LoadFromFile("img/p1.bmp");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z2MouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z2->Picture->LoadFromFile("img/p2a.bmp");
+        sndPlaySound("snd/d2.wav", SND_ASYNC);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z2MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z2->Picture->LoadFromFile("img/p2.bmp");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z3MouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z3->Picture->LoadFromFile("img/p3a.bmp");
+        sndPlaySound("snd/d3.wav", SND_ASYNC);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z3MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z3->Picture->LoadFromFile("img/p3.bmp");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z4MouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z4->Picture->LoadFromFile("img/p4a.bmp");
+        sndPlaySound("snd/d4.wav", SND_ASYNC);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z4MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z4->Picture->LoadFromFile("img/p4.bmp");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z5MouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z5->Picture->LoadFromFile("img/p5a.bmp");
+        sndPlaySound("snd/d5.wav", SND_ASYNC);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::z5MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+        z5->Picture->LoadFromFile("img/p5.bmp");
 }
 //---------------------------------------------------------------------------
 
